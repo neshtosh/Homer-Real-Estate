@@ -1,0 +1,44 @@
+.App {
+    position: relative;
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+}
+
+/* Wrapper for the Header and Hero sections along with the video */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport for Header + Hero */
+    overflow: hidden; /* Keep video constrained within the wrapper */
+}
+
+/* Video background */
+.video-background {
+    position: absolute; /* Use absolute positioning to keep the video within the wrapper */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height and width of the container */
+    z-index: -1; /* Ensure the video stays behind the content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area of the container */
+}
+
+/* Overlay content for Header and Hero */
+.overlay-content {
+    position: relative;
+    z-index: 1; /* Keep the content above the video */
+    width: 100%;
+}
+
+/* Optional: Gradient effect */
+.White-gradient {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(255, 255, 255, 0.522);
+    filter: blur(100px);
+}

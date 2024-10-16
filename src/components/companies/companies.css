@@ -1,0 +1,42 @@
+.c-wrapper {
+    padding: 2rem 1rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.c-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 7rem; 
+    flex-wrap: wrap; 
+}
+
+.c-container > img {
+    width: 9rem; 
+    transition: transform 0.3s ease; 
+}
+
+
+.c-container > img:hover {
+    transform: scale(1.1); 
+}
+
+
+@media (max-width: 768px) {
+    .c-container > img {
+        width: 7rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .c-container > img {
+        width: 6rem; 
+    }
+}
+
+@media (max-width: 320px) {
+    .c-container > img {
+        width: 5rem;
+    }
+}

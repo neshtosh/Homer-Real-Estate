@@ -1,0 +1,151 @@
+.v-wrapper {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.innerwidth {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2rem;
+     
+}
+
+.v-left .image-container img {
+    max-width: 100%;
+    border-radius: 1rem;
+    border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.v-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 600px;
+    margin-right: 10px;
+}
+
+.orangeText {
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.primaryText {
+    color: #00256B;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.secondaryText {
+    color: #5a5a5a;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+.accordion {
+    margin-top: 2rem;
+    width: 100%; 
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+.accordionItem {
+    border: none; 
+    background-color: #f5f7fb; 
+    transition: background-color 0.3s ease; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+}
+.accordionItem:hover {
+    background-color: #eceff4; 
+}
+.accordionItemButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 8px; 
+    background: white;
+    transition: all 0.3s ease; 
+}
+.accordionItemButton:hover {
+    background-color: #dde1e7; 
+    color: #00256B; 
+}
+.accordionItemButton .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee; 
+    padding: 0.5rem;
+    border-radius: 50%; 
+    margin-right: 10px;
+    transition: background-color 0.3s ease; 
+}
+.accordionItemButton .icon svg {
+    fill: #00256B; 
+    transition: transform 0.3s ease;
+}
+.accordionItemButton .icon:hover svg {
+    transform: scale(1.1); 
+}
+.accordionItemButton .primaryText {
+    font-size: 1.25rem; 
+    font-weight: 600;
+    color: #00256B;
+}  
+.accordionItemPanel {
+    padding: 1rem;
+    background-color: #fff; 
+    border-radius: 0 0 8px 8px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6; 
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+.accordionItemButton .icon:last-child {
+    margin-left: auto;
+    transform: rotate(0deg); 
+    transition: transform 0.3s ease; 
+}
+.accordionItem[aria-expanded='true'] .icon:last-child {
+    transform: rotate(180deg); 
+}
+.primaryText {
+    color: #00256B;
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.primaryText:hover {
+    color: #ff6b00; 
+}
+.icon{
+    padding: 5px;
+    background: #eeeeff;
+    max-width:fit-content;
+    margin: 5;
+   
+}
+.icon svg {
+    fill: var(--blue);
+    width: 24px; 
+    height: 24px;
+}
