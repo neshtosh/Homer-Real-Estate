@@ -73,7 +73,7 @@ a {
 }
 
 .secondaryText {
-  color: rgb(140 139 139);
+  color: rgb(140, 139, 139);
   font-size: 0.9rem;
 }
 .orangeText {
@@ -96,6 +96,7 @@ a {
 .button:hover{
   cursor: pointer;
   transform: scale(1.1);
+  background-color: #3c00ff;
 }
 
 

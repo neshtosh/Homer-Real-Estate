@@ -18,7 +18,7 @@ const Getstarted = () => {
       <div className="paddings innerWidth g-container">
         <div className="flexColCenter inner-container">
           <span className="primaryText">Get Started With Homer</span>
-          <span className="secondaryText">Join us to find your dream home.</span>
+          <span className="secondary">Join us to find your dream home.</span>
           <motion.button
             className="button"
             initial={{ scale: 0.9 }} // Initial scale

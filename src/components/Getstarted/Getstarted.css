@@ -1,10 +1,11 @@
 .inner-container{
     gap: 1.5rem;
-    background: rgb(50, 119, 246);
-    padding: 2rem;
+    background: linear-gradient(135deg, #0057b7, #3c00ff); /* Blue to yellow gradient */
+    padding: 1rem;
     border-radius: 10px;
     border: 2px solid rgb(77, 116, 188);
     text-align: center;
+    margin-bottom: -30px;
 }
 .inner-container .primaryText{
     color: rgb(255, 255, 255);
@@ -13,12 +14,19 @@
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
-.inner-container .secondaryText{
+.secondary{
     color: rgba(255, 255, 255, 0.587);
+    font-size: small;
 }    
 .inner-container .button{
     background: #5a73d7;
     border: 2px solid white;
     box-shadow: var(--shadow);
     border-radius: 10px;
+}
+.inner-container .button:hover {
+    background-color: #3c00ff; /* Darker blue on hover */
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
 }

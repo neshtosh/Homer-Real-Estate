@@ -1,12 +1,14 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import './Hero.css';
 import { HiLocationMarker } from 'react-icons/hi';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer'; 
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [ref, inView] = useInView({ threshold: 0.1 });
+  const [searchType, setSearchType] = useState('forSale');
 
   return (
     <motion.section
@@ -16,8 +18,6 @@ const Hero = () => {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: 'easeInOut' }}
     >
-      
-      
       <div className="paddings innerwidth flexCenter hero-container">
         {/* Left side */}
         <div className="flexColStart hero-left">
@@ -29,9 +29,8 @@ const Hero = () => {
           >
             <div className="orange-circle" />
             <h1>
-              Discover <br />
-              Most Suitable <br />
-              Home.
+              Your Dream Home <br />
+              Awaits!
             </h1>
           </motion.div>
           <div className="flexCenter hero-description">
@@ -40,10 +39,33 @@ const Hero = () => {
               to help you choose your dream home.
             </span>
           </div>
+          <div className="flexCenter search-options">
+            <button 
+              className={`option-button ${searchType === 'forSale' ? 'active' : ''}`}
+              onClick={() => setSearchType('forSale')}
+            >
+              For Sale
+            </button>
+            <button 
+              className={`option-button ${searchType === 'forRent' ? 'active' : ''}`}
+              onClick={() => setSearchType('forRent')}
+            >
+              For Rent
+            </button>
+          </div>
+
+          {/* Search Bar */}
           <div className="flexCenter search-bar">
             <HiLocationMarker color="var(--blue)" size={25} />
             <input type="text" placeholder="Enter location..." />
-            <button className="button">search</button>
+            <button className="button">Search</button>
+          </div>
+
+          <div className="hero-buttons">
+            <Link to="/create-listing">
+              <button className="button create-listing">Create Listing</button>
+            </Link>
+            <button className="button property-advice">Property Advice</button>
           </div>
 
           <div className="flexCenter stats">

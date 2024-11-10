@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import { BiMenuAltRight } from 'react-icons/bi';
 import OutsideClickHandler from 'react-outside-click-handler';
@@ -32,15 +33,18 @@ const Header = () => {
       exit={{ opacity: 0, y: 20 }} 
       transition={{ duration: 1.5, ease: 'easeInOut' }} // Adjust duration as needed
     >
-      <div className="flexColStart paddings innerWidth h-container">
-        <img src="./logo.png" alt="logo" width={100} />
+     <div className="flexColStart paddings innerWidth h-container">
+        {/* Use Link to="/" so the logo redirects to the main route */}
+        <Link to="/">
+          <img src="./logo.png" alt="logo" width={150} />
+        </Link>
 
         <OutsideClickHandler onOutsideClick={() => setMenuOpened(false)}>
           <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-            <a href="">residences</a>
-            <a href="">our value</a>
-            <a href="">contact us</a>
-            <a href="">get started</a>
+            <a href="">Projects</a>
+            <a href="">For Sale</a>
+            <a href="">For Rent</a>
+            <a href="">All Properties</a>
             <button className="button">
               <a href="">contact</a>
             </button>

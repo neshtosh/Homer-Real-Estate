@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero-wrapper {
     color: rgb(0, 0, 0);
     position: relative;
@@ -13,7 +14,8 @@
     left: 0; /* Align to left */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    z-index: -1; /* Send it to the back */
+    z-index: -1;
+    filter: blur(4px); /* Send it to the back */
 }
 
 .video-background video {
@@ -33,6 +35,7 @@
     max-width: unset; /* Same as your header max width */
     margin: 0 auto; /* Centers the container horizontally */
     padding: 0 var(--header-margin);
+    flex-wrap: wrap;
 }
 
 /* Left side */
@@ -51,7 +54,18 @@
     line-height: 4rem;
 }
 
-.orange-circle {
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000; /* Change to your desired text color */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8), /* Glow effect */
+        0 0 10px rgba(255, 255, 255, 0.5); /* Larger glow */
+    margin-top: 2rem;
+}
+
+
+orange-circle {
     height: 4rem;
     width: 4rem;
     background: var(--orange-gradient);
@@ -62,34 +76,135 @@
     z-index: -1;
 }
 
-.search-bar {
+/* Search Options (forSale, forRent buttons) */
+.search-options {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin-bottom: -50px;
+     /* Position buttons flush with the search bar */
+}
+.search-option {
     background-color: white;
+    border: 2px solid var(--blue);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px 5px 0 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.search-option.active {
+    background-color: var(--blue);
+    color: white;
+}
+.search-option:not(.active):hover {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+.hero-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons .button {
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
-    border: 3px solid rgba(120, 120, 120, 0.374);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-listing {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-listing:hover {
+    background-color: white;
+}
+
+.property-advice {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid var(--blue);
+}
+
+.property-advice:hover {
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.option-button {
+    background-color: #f0f0f0; /* Light background for buttons */
+    border: 2px solid #007BFF; /* Blue border */
+    border-bottom: none; /* Remove bottom border to merge with search bar */
+    border-radius: 5px 5px 0 0; /* Rounded corners only at the top */
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold; /* Make the text bold */
+}
+
+.option-button.active {
+    background-color: #007BFF; /* Active button color */
+    color: white;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Merge buttons' borders */
+.option-button:first-child {
+    border-right: none; /* Remove right border of the first button */
+}
+
+.option-button:last-child {
+    border-left: none; /* Remove left border of the last button */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 5px 5px; /* Rounded corners only at the bottom */
+    border: 3px solid #007BFF; /* Match button border color */
     padding: 0.5rem 1rem;
-    justify-content: space-between;
-    width: 60%;
+    width: 100%; /* Responsive width */
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    margin-bottom: -40px;
 }
 
-@media (max-width: 768px) {
-    .search-bar {
-        padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
-        width: 90%; /* Make it slightly smaller on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .search-bar {
-        padding: 0.3rem 0.5rem; /* Further adjust padding for very small screens */
-        width: 95%; /* Take almost full width on very small screens */
-    }
+.search-bar:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar > input {
     border: none;
     outline: none;
+    flex-grow: 1;
+    padding: 0.5rem;
 }
 
+.search-bar > button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar > button:hover {
+    background-color: #0056b3;
+}
+
+/* Stats Section */
 .stats {
     gap: 3rem;
     margin-right: 2rem;
@@ -105,15 +220,45 @@
 
 /* Right side */
 .image-container {
-    width: 30rem;
-    height: 35rem;
+    width: 32rem;
+    height: 32rem;
     overflow: hidden;
-    border-radius: 15rem 15rem 0 0;
-    border: 8px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%; /* Round corners for a circle */
+    border: 8px solid rgba(13, 0, 255, 0.7); /* Blue border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 .image-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container */
+    transition: transform 0.3s;
+}
+
+.image-container:hover > img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
+        width: 90%;
+    }
+
+    .option-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        padding: 0.3rem 0.5rem;
+        width: 95%;
+    }
+
+    .option-button {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }

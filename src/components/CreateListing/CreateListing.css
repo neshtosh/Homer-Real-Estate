@@ -1,0 +1,95 @@
+/* CreateListing.css */
+
+.create-listing {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+
+
+.create-listing h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #0800ff;
+    text-align: center;
+}
+
+.create-listing form div {
+    margin-bottom: 1rem;
+}
+
+.create-listing label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.create-listing input[type="text"],
+.create-listing input[type="number"],
+.create-listing input[type="file"],
+.create-listing textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.create-listing input[type="text"]:focus,
+.create-listing input[type="number"]:focus,
+.create-listing textarea:focus {
+    border-color: #0800ff;
+    outline: none;
+}
+
+.create-listing textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.create-listing button[type="submit"] {
+    background-color: #0800ff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.create-listing button[type="submit"]:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .create-listing {
+        padding: 1.5rem;
+    }
+
+    .create-listing h2 {
+        font-size: 1.5rem;
+    }
+
+    .create-listing button[type="submit"] {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}

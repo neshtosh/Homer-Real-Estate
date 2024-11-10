@@ -2,18 +2,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0; /* Vertical padding */
+    padding: 0rem 0; /* Vertical padding */
     margin: 0 auto; /* Horizontal margin */
-    max-width: 1200px;
+    max-width: 1800px;
     width: 100%;
     color: white;
     position: relative;
-    top: 0;
+    top: 20px;
     left: 0;
     z-index: 100; /* Ensure the header stays above the video */
-    background: rgba(0, 0, 0, 0.3); /* Adjust transparency as needed */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
     backdrop-filter: blur(10px); /* Optional blur for readability */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .h-container {
@@ -33,6 +36,8 @@
 
 .h-menu > *:hover {
     cursor: pointer;
+    color: #FFD700; /* Change color on hover for a gold effect */
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 .menu-icon {
