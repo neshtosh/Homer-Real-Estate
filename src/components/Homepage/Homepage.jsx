@@ -1,11 +1,11 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
-import Companies from '../companies/Companies';
 import Residencies from '../Residencies/Residencies';
 import Value from '../Value/Value';
 import Contact from '../Contact/Contact';
 import Getstarted from '../Getstarted/Getstarted';
 import './Homepage.css';
+import Companies from '../companies/Companies';
 
 const HomePage = () => {
   return (
