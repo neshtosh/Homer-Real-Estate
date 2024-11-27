@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faBath, faRulerCombined } from '@fortawesome/free-solid-svg-icons';
-import AllPropertiesHeader from '../allpropertiesheader/AllPropertiesHeader';
+
 import './AllProperties 2.css';
+import AllPropertiesHeader from '../allpropertiesheader/AllPropertiesHeader';
 
 const PROPERTIES_PER_PAGE = 20;
 
