@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    
+}
+
+.property-container {
+    display: grid;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+.properties-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    max-width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.image-slider {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.property-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.property-details {
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: blue;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.location {
+    color: #888;
+    font-style: italic;
+}
+
+.property-icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.property-icons span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.property-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.owner-icon {
+    color: gold; 
+}
+
+.property-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.owner-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+.dollar-sign {
+    font-weight: bold; 
+    color: orange; 
+    font-size: 1.2em;
+    margin-right: 2px; 
+}
+.search-filter-header{
+    margin-left: 70rem;
+    margin-bottom: 2.5rem;
+    
+}
+
+/* Pagination Controls */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    gap: 40px;
+    font-family: 'Arial', sans-serif;
+    max-width: 1250px;
+}
+
+.pagination-controls button {
+    background-color: #0800ff;
+    color: #fff;
+    border: none;
+    padding: 5px 20px; /* Adjusted padding */
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+}
+
+.pagination-controls button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+}
+
+@media (max-width: 600px) {
+    .pagination-controls {
+        gap: 10px;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .pagination-controls button {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    .pagination-controls span {
+        font-size: 0.8rem;
+    }
+}

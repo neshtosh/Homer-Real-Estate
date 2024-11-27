@@ -3,6 +3,7 @@
     overflow-x: hidden; /* Ensure no horizontal scroll */
 }
 
+
 /* Wrapper for the Header and Hero sections along with the video */
 .video-wrapper {
     position: relative;
@@ -20,6 +21,7 @@
     height: 100%; /* Full height and width of the container */
     z-index: -1; /* Ensure the video stays behind the content */
 }
+
 
 .video-background video {
     width: 100%;

@@ -4,11 +4,21 @@ import { HiLocationMarker } from 'react-icons/hi';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer'; 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const [ref, inView] = useInView({ threshold: 0.1 });
   const [searchType, setSearchType] = useState('forSale');
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      // Redirect to the search results page with the query as a URL parameter
+      navigate(`/search?query=${searchQuery}&type=${searchType}`);
+    }
+  };
+
 
   return (
     <motion.section
@@ -33,12 +43,7 @@ const Hero = () => {
               Awaits!
             </h1>
           </motion.div>
-          <div className="flexCenter hero-description">
-            <span className="secondaryText">
-              Explore a selection of properties <br />
-              to help you choose your dream home.
-            </span>
-          </div>
+          
           <div className="flexCenter search-options">
             <button 
               className={`option-button ${searchType === 'forSale' ? 'active' : ''}`}
@@ -57,15 +62,17 @@ const Hero = () => {
           {/* Search Bar */}
           <div className="flexCenter search-bar">
             <HiLocationMarker color="var(--blue)" size={25} />
-            <input type="text" placeholder="Enter location..." />
-            <button className="button">Search</button>
+            <input type="text" placeholder="Enter location..." value ={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+            <button className="button" onClick={handleSearch}>Search</button>
           </div>
 
           <div className="hero-buttons">
             <Link to="/create-listing">
               <button className="button create-listing">Create Listing</button>
             </Link>
+            <Link to="/property-advice">
             <button className="button property-advice">Property Advice</button>
+            </Link>
           </div>
 
           <div className="flexCenter stats">

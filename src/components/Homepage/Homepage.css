@@ -1,0 +1,39 @@
+/* Fullscreen background image */
+.background-wrapper {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    background-image: url('/backgrnd.png'); /* Path to your background image */
+    background-size: cover; /* Ensure it covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    
+  }
+  
+  .overlay-content {
+    position: relative;
+    z-index: 1; /* Content above the background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Optional: Add a gradient overlay */
+  .background-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 0; /* Below the content */
+  }
+  @media (max-width: 768px) {
+    .background-wrapper {
+        height: 65vh;
+        
+    }
+  }        
