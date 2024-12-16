@@ -5,7 +5,7 @@ import Value from '../Value/Value';
 import Contact from '../Contact/Contact';
 import Getstarted from '../Getstarted/Getstarted';
 import './Homepage.css';
-import Companies from '../companies/Companies';
+import Companies from '../companies/companies';
 
 const HomePage = () => {
   return (

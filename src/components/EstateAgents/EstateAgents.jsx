@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './EstateAgents.css';
 import Filters from './Filters';
 import TopAgents from './TopAgents';
-import EstateAgentCard from './EstateAgentcard';
+import EstateAgentCard from "./EstateAgentCard"
 
 // Sample agent data
 const agents = [

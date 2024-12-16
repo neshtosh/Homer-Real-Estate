@@ -1,4 +1,4 @@
-import owner1Logo from '../ownerLogos/ownerLogo.png';
+import owner1Logo from '../ownerLogos/ownerlogo.png';
 import owner2Logo from '../ownerLogos/ownerlogo2.png';
 import propertyImage1 from '../propertyImages/fancyapartment1.jpeg';
 import propertyImage2 from '../propertyImages/fancyapartment2.jpeg';

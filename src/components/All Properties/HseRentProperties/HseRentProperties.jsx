@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faBath, faRulerCombined } from '@fortawesome/free-solid-svg-icons';
-import AllPropertiesHeader from '../allpropertiesheader/AllPropertiesHeader';
+import AllPropertiesHeader from '../AllPropertiesHeader/AllPropertiesHeader';
 import { properties } from '../../../mockhserentProperties/mockhserentProperties';
 
 const PROPERTIES_PER_PAGE = 20;
